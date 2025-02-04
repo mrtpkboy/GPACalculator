@@ -11,34 +11,30 @@ classDiagram
         + UpdateStatistics()
     }
 
-    Form1 : +lblMaxGrade : Label
-    Form1 : +lblMinGrade : Label
-    Form1 : +lblGPAx : Label
-    Form1 : +lblStudentCount : Label
-    Form1 : +txtGrade : TextBox
-    Form1 : +lstGrades : ListBox
-    Form1 : +btnAddGrade : Button
-
-    Form1 : +grades = List<double>
-    Form1 : +btnAddGrade_Click(sender, e)
-    Form1 : +UpdateStatistics()
-
     class Label {
-        + Text : string
+        + Text: string
     }
-    
+
     class TextBox {
-        + Text : string
+        + Text: string
         + Clear()
         + Focus()
     }
 
     class ListBox {
-        + Items : List<string>
+        + Items: List<string>
         + Add(string)
     }
 
     class Button {
-        + Text : string
+        + Text: string
         + Click()
     }
+
+    Form1 --|> Label : lblMaxGrade
+    Form1 --|> Label : lblMinGrade
+    Form1 --|> Label : lblGPAx
+    Form1 --|> Label : lblStudentCount
+    Form1 --|> TextBox : txtGrade
+    Form1 --|> ListBox : lstGrades
+    Form1 --|> Button : btnAddGrade
