@@ -1,7 +1,5 @@
 # GPACalculator
 
-## Class Diagram
-
 ```mermaid
 classDiagram
     class Form1 {
